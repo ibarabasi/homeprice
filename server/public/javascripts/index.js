@@ -12,7 +12,7 @@
         $('.loading').show();
         $('.answers').hide();
         $('.classify-btn').prop('disabled', true);
-        $.post("/classify", {SquareFeet: SquareFeet,
+        $.post("/predict", {SquareFeet: SquareFeet,
                              Bedrooms: Bedrooms
                             }, function(data) {
             renderAnswer(data)
