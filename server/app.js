@@ -25,7 +25,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var classify = require('./routes/classify');
+var predict = require('./routes/predict');
 
 var app = express();
 
@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/classify', classify);
+app.use('/predict', predict);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
