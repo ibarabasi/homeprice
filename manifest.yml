@@ -7,4 +7,4 @@ applications:
   memory: 256M
   env:
     API_KEY: E2oNzJiTRhq44_HBLecPI-wFiN-PtCMQUzcTMsafNRLl
-    DEPLOYMENT_URL: homeprice.mybluemix.net
+    DEPLOYMENT_URL: https://us-south.ml.cloud.ibm.com/ml/v4/deployments/6ca10e9f-8394-4005-8646-b5e6ee67cc6b/predictions?version=2020-10-10
