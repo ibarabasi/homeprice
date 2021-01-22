@@ -28,6 +28,7 @@
         if (parsedResponse.errors) {
             $('.answer').html('Something went wrong :-( ' + parsedResponse.errors[0].message);
         } else {
+            $('.answer').html('Print Something');
             var data = parsedResponse.predictions[0].values[0]
             var prediction = data[0]
             $('.prediction').html('Prediction: '+ prediction +'%');
