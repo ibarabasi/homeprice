@@ -33,6 +33,7 @@
             var prediction = data[0]
             $('.prediction').html('Prediction: '+ prediction +'%');
         }
+        
         $('.classify-btn').prop('disabled', false);
         $('.answers').show();
         $('.loading').hide();
