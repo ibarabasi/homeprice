@@ -29,11 +29,7 @@
             $('.answer').html('Something went wrong :-( ' + parsedResponse.errors[0].message);
         } else {
             var data = parsedResponse.predictions[0].values[0]
-            var prediction = data[3][0]
-            var something1 = data[1][0]
-            var something2 = data[2][0]
-            $('.something1').html('Something1: '+something1);
-            $('.something2').html('Something2: '+something2);
+            $('.answer').html('Predictions: '+ data);
         }
 
         $('.classify-btn').prop('disabled', false);
