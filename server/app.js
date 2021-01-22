@@ -19,6 +19,7 @@
 "use strict";
 
 var express = require('express');
+var fs = require('fs');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -28,6 +29,12 @@ var bodyParser = require('body-parser');
 var predict = require('./routes/predict');
 
 var app = express();
+
+// create a write stream (in append mode)
+var accessLogStream = fs.createWriteStream(__dirname + '/access.log',{flags: 'a'});
+
+// setup the logger
+app.use(logger('combined', {stream: accessLogStream}))
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
