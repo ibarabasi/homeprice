@@ -1,7 +1,7 @@
 (function() {
 
-    $('.answers').show();
-    $('.loading').show();
+    $('.answers').hide();
+    $('.loading').hide();
     $('#form').submit(onFormSubmit);
     $('#SquareFeet').val('2000');
     $('#Bedrooms').val('3');
@@ -24,9 +24,17 @@
 
     function renderAnswer(parsedResponse) {
         console.log(parsedResponse);
-        $('.answer').html('Results: ' + parsedResponse);
+
+        if (parsedResponse.errors) {
+            $('.answer').html('Something went wrong :-( ' + parsedResponse.errors[0].message);
+        } else {
+            var data = parsedResponse.predictions[0].values[0]
+            var prediction = data[0]
+            $('.prediction').html('Prediction: '+ prediction +'%');
+        }
+
         $('.classify-btn').prop('disabled', false);
         $('.answers').show();
-        $('.loading').show();
+        $('.loading').hide();
     }
 }());
