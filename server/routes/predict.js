@@ -28,11 +28,11 @@ const apiKey = process.env.API_KEY
 const deploymentURL = process.env.DEPLOYMENT_URL
 
 router.post('/', function(req, res, next) {
-  classify(req, res);
+  predict(req, res);
 });
 
-function classify(req, res) {
-  console.log("Classifying:")
+function predict(req, res) {
+  console.log("Predicting:")
   console.log(req.body);
 
   getToken((req, res, err) => console.log(err), function () {
