@@ -30,7 +30,10 @@
         } else {
             var data = parsedResponse.predictions[0].values[0]
             var prediction = data[3][0]
-            $('.prediction').html('Prediction: prediction);
+            var something1 = data[1][0]
+            var something2 = data[2][0]
+            $('.something1').html('Something1: '+something1);
+            $('.something2').html('Something2: '+something2);
         }
 
         $('.classify-btn').prop('disabled', false);
