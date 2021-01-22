@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>IBM Watson Machine Learning Home Price Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Home price prediction using various algorithms" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <!--<link href="stylesheets/watson-bootstrap-dark.css" rel="stylesheet">-->
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+
+    <body>
+
+        <div class="container">
+            <div class="row header">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>IBM Watson Machine Learning Heart Risk Example
+                            <small>By the IBM Developer Advocacy team</small>
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            Use <a target="_blank" href="https://www.ibm.com/cloud/machine-learning/">Watson Machine Learning</a> to predict home prices.
+                        </p>
+                        <p>
+                            The Training Data: The data set used in this example was mocked up and is only for demonstrative and illustrative purposes only and does not constitute an offering that has gone through regulatory review.
+                        </p>
+                        <p>
+                            <a target="_blank" href="https://github.com/ibarabasi/homeprice"> Fork the code in GitHub </a> |
+                            <a target="_blank" href="https://www.ibm.com/cloud/machine-learning/"> WML Product Page </a> |
+                            <a target="_blank" href="https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/wml-ai.html"> View the docs </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <form id="form" role="form">
+                            <div class="input-group classifier-input-form">
+                                <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <label for="SquareFeet">SquareFeet</label>
+                                            <input id="SquareFeet" class="form-control input-lg" placeholder="Enter SquareFeet" type="text" autofocus required />
+                                        </div>
+                                        <div>
+                                            <label for="Bedrooms">Bedrooms</label>
+                                            <input id="Bedrooms" class="form-control input-lg" placeholder="Enter Bedrooms" type="text" autofocus required />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </table>
+                            <div>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg classify-btn" type="submit">Classify
+                                        <i class="loading fa fa-spinner fa-spin"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row answers">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <h1 class="answer"></h1>
+                        <p class="SquareFeet"></p>
+                        <p class="Bedrooms"></p>
+                        <p class="features"></p>
+                        <p class="prediction"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="javascripts/index.js"></script>
+    </body>
